@@ -11,7 +11,7 @@ gem 'sass-rails'
 gem 'coffee-rails'
 gem 'jquery-turbolinks'
 gem 'gravatar_image_tag'
-gem "mailboxer"
+gem 'mailboxer'
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'bootstrap-will_paginate'
