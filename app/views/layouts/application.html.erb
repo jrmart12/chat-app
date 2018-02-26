@@ -1,3 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Chat App</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav class="navbar  navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header ">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <%= link_to 'Chat App', root_path, class: 'navbar-brand' %>
+    </div>
+    <div class="collapse navbar-collapse navbar-right" id="navbar-collapsible-content">
+    <ul class="nav navbar-nav">
+      <% if user_signed_in? %>
+        <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+        <li><%= link_to 'Your Conversations', conversations_path %></li>
+        <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to 'Log In', new_user_session_path %></li>
+      <% end %>
+    </ul>
+  </div>
+  </div>
+</nav>
+
 <div class="container">
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>">
@@ -8,25 +44,15 @@
   <div class="page-header">
     <h1><%= yield :page_header %></h1>
   </div>
-<p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-<body>
-  <nav class="navbar navbar-inverse">
-    <div class="container">
-      <div class="navbar-header">
-        <%= link_to 'Synergy', root_path, class: 'navbar-brand' %>
-      </div>
-      <ul class="nav navbar-nav">
-        <% if user_signed_in? %>
-          <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
-          <li><%= link_to 'Your Conversations', conversations_path %></li>
-          <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to 'Log In', new_user_session_path %></li>
-        <% end %>
-      </ul>
-    </div>
-  </nav>
-</body>
+
   <%= yield %>
 </div>
+
+<footer>
+  <div class="container">
+    <p class="text-muted">Created by Jose Martinez and Alejandro Carracioli</p>
+  </div>
+</footer>
+
+</body>
+</html>

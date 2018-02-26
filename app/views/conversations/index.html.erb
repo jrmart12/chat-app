@@ -1,7 +1,13 @@
 <% page_header "Your Conversations" %>
 
+<p><%= link_to 'Start conversation', new_message_path, class: 'btn btn-lg btn-primary' %></p>
+<div class="row">
+  <div class="col-sm-3">
+    <ul class="nav nav-pills nav-stacked">
 <ul class="list-group">
   <%= render partial: 'conversations/conversation', collection: @conversations %>
 </ul>
-
+</ul>
 <%= will_paginate %>
+</div>
+</div>

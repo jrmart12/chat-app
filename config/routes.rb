@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "home#index"
 resources :conversations, only: [:index, :show, :destroy]
+  resources :messages, only: [:new, :create]
+  root to: 'conversations#index'
   end

@@ -1,5 +1,15 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+@import 'chosen';
+@import 'image-select';
+
+.messages {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
 .alert-notice {
   @extend .alert-success;
 }
@@ -8,9 +18,7 @@
   @extend .alert-warning;
 }
 
-.messages {
-  max-height: 400px;
-  overflow-y: auto;
-  margin-bottom: 1em;
-  margin-top: 1em;
+footer {
+  margin-top: 2em;
+  clear: both;
 }

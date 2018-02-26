@@ -10,6 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
+//= require jquery
+//= require jquery.turbolinks
+//= require jquery_ujs
+//= require chosen-jquery
+//= require jquery.image-select
+//= require messages
 //= require turbolinks
-//= require_tree .
