@@ -48,6 +48,8 @@ GEM
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    bootstrap-social-rails (4.12.0)
+      railties (>= 3.1)
     bootstrap-will_paginate (1.0.0)
       will_paginate
     bootstrap_form (2.7.0)
@@ -88,6 +90,8 @@ GEM
     erubi (1.7.0)
     execjs (2.7.0)
     ffi (1.9.23)
+    font-awesome-rails (4.7.0.3)
+      railties (>= 3.2, < 5.2)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     gravatar_image_tag (1.2.0)
@@ -179,6 +183,8 @@ GEM
     selenium-webdriver (3.9.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    social-share-button (1.1.0)
+      coffee-rails
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -220,6 +226,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass
+  bootstrap-social-rails
   bootstrap-will_paginate
   bootstrap_form
   byebug
@@ -227,6 +234,7 @@ DEPENDENCIES
   chosen-rails
   coffee-rails
   devise
+  font-awesome-rails
   gravatar_image_tag
   jbuilder (~> 2.5)
   jquery-rails
@@ -238,6 +246,7 @@ DEPENDENCIES
   rails (~> 5.1.5)
   sass-rails
   selenium-webdriver
+  social-share-button
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
