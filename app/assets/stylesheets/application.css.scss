@@ -66,3 +66,17 @@ footer {
 #lab_social_icon_footer #social-em:hover {
   color: #f39c12;
 }
+.radio-green [type="radio"]:checked+label:after {
+    border-color: #00C851;
+    background-color: #00C851;
+}
+/*Gap*/
+
+.radio-green-gap [type="radio"].with-gap:checked+label:before {
+    border-color: #00C851;
+}
+
+.radio-green-gap [type="radio"]:checked+label:after {
+    border-color: #00C851;
+    background-color: #00C851;
+}           

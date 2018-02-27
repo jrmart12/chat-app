@@ -23,6 +23,7 @@
     <div class="collapse navbar-collapse navbar-right" id="navbar-collapsible-content">
     <ul class="nav navbar-nav">
       <% if user_signed_in? %>
+        <li><%= link_to 'Chat', new_message_path %></li>
         <li><%= link_to 'Your Conversations', conversations_path %></li>      
         <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
         <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
@@ -41,11 +42,9 @@
       <%= value %>
     </div>
   <% end %>
-
   <div class="page-header">
     <h1><%= yield :page_header %></h1>
   </div>
-
   <%= yield %>
 </div>
 
