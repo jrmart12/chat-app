@@ -7,7 +7,6 @@ class ConversationsController < ApplicationController
   def index
     if @box.eql? "inbox"
       @conversations = @mailbox.inbox
-    elsif @box.eql? "sent"
       @conversations = @mailbox.sentbox
     else
       @conversations = @mailbox.trash
