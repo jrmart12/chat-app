@@ -5,12 +5,7 @@ class ConversationsController < ApplicationController
   before_action :get_box, only: [:index]
 
   def index
-    if @box.eql? "inbox"
-      @conversations = @mailbox.inbox
-      @conversations = @mailbox.sentbox
-    else
-      @conversations = @mailbox.trash
-    end
+      @conversations = @mailbox.conversations
 
     @conversations = @conversations.paginate(page: params[:page], per_page: 10)
   end
@@ -18,11 +13,14 @@ class ConversationsController < ApplicationController
   def show
   end
 
+
+
   def reply
     current_user.reply_to_conversation(@conversation, params[:body])
     flash[:success] = 'Reply sent'
     redirect_to conversation_path(@conversation)
   end
+
 
   private
 

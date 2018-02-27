@@ -9,26 +9,26 @@
 </head>
 <body>
 
-<nav class="navbar  navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header ">
+<nav class="nav navbar-inverse nav-pills navbar-righ">
+  <div class="container"> 
+    <div class="navbar-header active">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>
-        <%= link_to 'Chat App', root_path, class: 'navbar-brand' %>
+      </button >
+<%= link_to 'Chat App', root_path, class: 'navbar-brand' %>
     </div>
     <div class="collapse navbar-collapse navbar-right" id="navbar-collapsible-content">
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav nav-pills">
       <% if user_signed_in? %>
-        <li><%= link_to 'Chat', new_message_path %></li>
-        <li><%= link_to 'Your Conversations', conversations_path %></li>      
-        <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
-        <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+        <li class="active"><%= link_to 'Chat', new_message_path %></li>
+        <li ><%= link_to 'Your Conversations', conversations_path %></li>      
+        <li ><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+        <li ><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
       <% else %>
-        <li><%= link_to 'Log In', new_user_session_path %></li>
+        <li ><%= link_to 'Log In', new_user_session_path %></li>
         <li><%= link_to 'Sign Up', new_user_registration_path %></li>
       <% end %>
     </ul>
@@ -56,8 +56,8 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container">
         <div class="text-center center-block">
-                <a href="https://www.facebook.com/jr19986"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-              <a href="https://twitter.com/JRMartinez_12"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="https://www.facebook.com"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+              <a href="https://twitter.com"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
               <a href="mailto:#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
                  <p class="text-muted">Created by Jose Martinez and Alejandro Carracioli</p>
   </div>
